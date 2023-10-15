@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --left-btn-hover-color: rgba(87, 84, 236, 1);
+  --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.split {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fff;
+  font-size: 60px;
+  z-index: 10;
+  margin: 30px;
+  white-space: nowrap;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 18px 50px;
+  z-index: 10;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 700;
+  transition: all 0.3s linear;
+}
+
+.split.left {
+  height: 100vh;
+  left: 0;
+  background-image: url("/ps.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: width var(--speed) ease-in;
+}
+
+.split.left .btn:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--left-bg-color);
+  z-index: 0;
+  transition: width var(--speed) ease-in;
+}
+
+.hover-left .split.left {
+  width: var(--hover-width);
+}
+
+.hover-right .split.left {
+  width: var(--other-width);
+}
+
+.split.right {
+  height: 100vh;
+  right: 0;
+  background-image: url("/xbox.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: width var(--speed) ease-in;
+  z-index: 30;
+}
+
+.split.right .btn:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color: var(--right-btn-hover-color);
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--right-bg-color);
+  z-index: 0;
+  transition: width var(--speed) ease-in;
+}
+
+.hover-left .split.right {
+  width: var(--other-width);
+}
+
+.hover-right .split.right {
+  width: var(--hover-width);
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
