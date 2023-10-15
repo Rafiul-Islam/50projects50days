@@ -66,7 +66,7 @@ h1 {
 .split.left {
   height: 100vh;
   left: 0;
-  background-image: url("/ps.jpg");
+  background-image: url("../ps.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,7 +101,7 @@ h1 {
 .split.right {
   height: 100vh;
   right: 0;
-  background-image: url("/xbox.jpg");
+  background-image: url("../xbox.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
