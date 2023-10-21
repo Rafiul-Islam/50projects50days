@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq {
+  background: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 30px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-color: #fff;
+}
+
+.faq.active::after,
+.faq.active::before {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.faq.active::before {
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+  color: #3498db;
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  margin: 30px 0 0;
+  display: none;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.faq.active .btn {
+  background-color: #9fa4a8;
+}
+
+.btn .fa-angle-down {
+  display: block;
+}
+
+.btn .fa-times {
+  margin-top: 1px;
+  font-size: 18px;
+  display: none;
+}
+
+.faq.active .btn .fa-angle-down {
+  display: none;
+}
+
+.faq.active .btn .fa-times {
+  display: block;
+}
