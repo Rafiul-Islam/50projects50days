@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --dark-blue: #144fc6;
+  --light-blue: #6ab3f8;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  min-height: 100vh;
+  background-color: #3494e4;
+}
+
+.container {
+  width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container > h1 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.container > h3 {
+  font-weight: 500;
+}
+
+.big-jar {
+  text-align: center;
+  height: 300px;
+  width: 150px;
+  border: 5px solid var(--dark-blue);
+  border-top: 0;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+}
+
+.big-jar .empty {
+  background: #fff;
+  height: 100%;
+  color: #3494e4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.big-jar .filled {
+  background: var(--light-blue);
+  height: 0%;
+  overflow: hidden;
+  color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.5s ease;
+}
+
+.small-jars-container .top-jars,
+.small-jars-container .bottom-jars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.small-jar {
+  background: #fff;
+  height: 100px;
+  width: 60px;
+  margin: 10px;
+  border: 5px solid var(--dark-blue);
+  border-radius: 0 0 20px 20px;
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--light-blue);
+  cursor: pointer;
+}
+
+.small-jar.filled {
+  background-color: var(--light-blue);
+  color: #fff;
+}
