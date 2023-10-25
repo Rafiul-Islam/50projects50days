@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <form id="form">
+          <input type="search" placeholder="Search" />
+        </form>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="movie-container"></div>
+      <template movie-template>
+        <div class="movie">
+          <div class="header">
+            <img src="" alt="" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="movie-info">
+              <h3></h3>
+              <div class="rating"></div>
+            </div>
+            <div class="overview">
+              <h3>Overview</h3>
+              <span> </span>
+            </div>
+          </div>
+        </div>
+      </template>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
