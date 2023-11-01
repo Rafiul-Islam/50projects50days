@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  max-width: 1146px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+}
+
+canvas {
+  border: 3px solid steelblue;
+  border-radius: 4px;
+}
+
+.toolbox {
+  background: steelblue;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: -3px;
+  display: flex;
+  align-items: center;
+}
+
+.toolbox > * {
+  font-size: 1.3rem;
+  background: #fff;
+  border: none;
+  text-align: center;
+  display: block;
+  margin: 2px;
+  padding: 0.5rem 1rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbox > *:nth-child(2) {
+  cursor: default;
+}
+
+.toolbox > *:last-child {
+  margin-left: auto;
+  background: rgb(244, 176, 50);
+}
