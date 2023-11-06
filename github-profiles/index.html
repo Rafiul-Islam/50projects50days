@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profiles</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form id="form">
+        <input
+          class="search-input"
+          id="search"
+          type="text"
+          placeholder="Search a Github User"
+        />
+      </form>
+      <div class="info-card hide">
+        <div class="left">
+          <img src="" alt="" class="user-image" />
+        </div>
+        <div class="right">
+          <h2 id="name"></h2>
+          <p id="bio"></p>
+          <div class="grid">
+            <div class="followers">
+              <span></span>
+              <strong>Followers</strong>
+            </div>
+            <div class="following">
+              <span></span>
+              <strong>Following </strong>
+            </div>
+            <div class="repos">
+              <span></span>
+              <strong>Repos</strong>
+            </div>
+          </div>
+          <div class="repos-list"></div>
+        </div>
+      </div>
+      <div class="info-card-not-found hide">
+        <h1>No profile with this username!</h1>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+      integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

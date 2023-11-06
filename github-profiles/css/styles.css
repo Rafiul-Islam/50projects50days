@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --color-primary: rgb(42, 42, 114);
+  --color-secondary: rgb(76, 40, 133);
+  --color-white: #fff;
+  --color-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-primary);
+}
+
+.container {
+  width: 800px;
+  max-width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--color-secondary);
+  border: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #bababa;
+}
+
+.search-input:focus {
+  border: none;
+  outline: none;
+}
+
+.info-card {
+  height: auto;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 3rem;
+  color: #fff;
+}
+
+.info-card.hide {
+  display: none;
+}
+
+.info-card-not-found {
+  height: 300px;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  color: #fff;
+}
+
+.info-card-not-found.hide {
+  display: none;
+}
+
+.left {
+  margin-right: 30px;
+}
+
+.left img.user-image {
+  background: transparent;
+  border-radius: 50%;
+  border: 10px solid #2a2a72;
+  height: 150px;
+  width: 150px;
+}
+
+.right {
+  width: 600px;
+}
+
+.right h2 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.right > p {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.right .grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.right .grid > div {
+  flex: 1;
+  white-space: nowrap;
+  margin: 0.5rem;
+}
+
+.right .repos-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.right .repo {
+  color: var(--color-white);
+  margin: 0.2rem 0.2rem;
+  background-color: var(--color-primary);
+  font-size: 80%;
+  padding: 0.3rem 0.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.right .repo:nth-of-type(1) {
+  margin-left: 0;
+}
