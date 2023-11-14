@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="add-btn-container">
+        <button id="addButton" class="add-btn">
+          <i class="fas fa-plus"></i> Add Note
+        </button>
+      </div>
+      <div class="notes-container"></div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/marked/10.0.0/marked.min.js"
+      integrity="sha512-EjCqglelq9tO9KdT2iRYtcj19Q8sSXblMy+5SBfogeh5TvLwmRh9dz5l1uEwNO40/cZInZsr3jti2JCNMZJsng=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+<template note-template>
+  <div class="note">
+    <div class="tools">
+      <button id="editButton" class="edit-button">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button id="deleteButton" class="delete-button">
+        <i class="fas fa-trash"></i>
+      </button>
+    </div>
+    <div class="main hidden"></div>
+    <textarea class="textarea"></textarea>
+  </div>
+</template>
