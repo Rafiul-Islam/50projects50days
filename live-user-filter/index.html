@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live User Filter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="search-section">
+          <h4>Live User Filter</h4>
+          <small>Search by name and/or location Search </small>
+          <input class="search-field" type="search" placeholder="Search" />
+        </div>
+        <div class="users-section">
+          <ul class="users">
+            <h4 class="loading-text">Loading.....</h4>
+            <template card-template>
+              <li class="card">
+                <img
+                  picture
+                  class="picture"
+                  src="https://randomuser.me/api/portraits/women/10.jpg"
+                  alt="A Random User Image"
+                />
+                <div info>
+                  <p name class="name">Cecilia Longoria</p>
+                  <small address class="address">
+                    El Cerro Cabezón, Mexico
+                  </small>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
