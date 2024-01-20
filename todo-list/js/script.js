@@ -3,26 +3,64 @@ document.addEventListener("DOMContentLoaded", function () {
   const input = document.querySelector(".todos-input");
   const todoContainer = document.querySelector(".todo-list");
 
+  let todos = [];
+
+  if (localStorage.getItem("todos")) {
+    console.log(localStorage.getItem("todos"));
+    todos = JSON.parse(localStorage.getItem("todos"));
+
+    todos.forEach(({ todo, completed }) => createTodo(todo, completed));
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     createTodo(input.value);
+    setToLocalStorage(input.value);
     reset();
   });
 
-  function createTodo(txt) {
-    const todo = document
+  function createTodo(txt, status = false) {
+    const template = document
       .querySelector("[todo-item-template]")
       .content.children[0].cloneNode(true);
-    todo.textContent = txt;
-    todo.addEventListener("click", function () {
-      todo.classList.toggle("completed");
+    template.textContent = txt;
+
+    if (status) {
+      template.classList.add("completed");
+    }
+
+    template.addEventListener("click", function () {
+      template.classList.toggle("completed");
+
+      todos.forEach((item) => {
+        if (item.todo === txt && item.completed === status) {
+          item.completed = !item.completed;
+        }
+      });
+      localStorage.setItem("todos", JSON.stringify(todos));
     });
 
-    todo.addEventListener("contextmenu", function () {
-      todo.remove();
+    template.addEventListener("contextmenu", function () {
+      todos = todos.filter((item) => {
+        if (item.todo !== txt && item.completed !== status) {
+          return item;
+        }
+      });
+
+      localStorage.setItem("todos", JSON.stringify(todos));
+
+      template.remove();
     });
 
-    todoContainer.appendChild(todo);
+    todoContainer.appendChild(template);
+  }
+
+  function setToLocalStorage(todo) {
+    todos.push({
+      todo: todo,
+      completed: false,
+    });
+    localStorage.setItem("todos", JSON.stringify(todos));
   }
 
   function reset() {
