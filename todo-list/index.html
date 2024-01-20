@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>todos</h1>
+        <div class="form-wrapper">
+          <form>
+            <input
+              type="text"
+              class="todos-input"
+              placeholder="Enter your todo"
+            />
+          </form>
+          <div class="todos-container">
+            <ul class="todo-list">
+              <template todo-item-template>
+                <li class="todo-item">Your task here</li>
+              </template>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
