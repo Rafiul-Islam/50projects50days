@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Mobile Navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="nav layer-1"></div>
+      <div class="nav layer-2"></div>
+      <div class="nav layer-3">
+        <div class="logo-section">
+          <img width="120" src="./image/logo.png" alt="Netflix-logo" />
+          <i
+            role="button"
+            id="navCloserButton"
+            class="fa fa-times"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <ul>
+          <li>TEAMS</li>
+          <li>LOCATIONS</li>
+          <li>
+            <span>LIFE AT NETFLIX</span>
+            <br />
+            <br />
+            <ul>
+              <li>NETFLIX CULTURE MEMO</li>
+              <li>WORK LIFE BALANCE</li>
+              <li>INCLUSION & DIVERSITY</li>
+              <li>BLOG</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <i id="navOpenerButton" class="fa fa-list fa-2x"></i>
+      <div align="center">
+        <img width="200" src="./image/logo.png" alt="Netflix-logo" />
+        <p>MOBILE NAVIGATION</p>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
