@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-container {
+  background-color: #476ce4;
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 50px 80px;
+  max-width: 768px;
+  position: relative;
+}
+
+.progressbar {
+  width: 100%;
+}
+
+.progressbar .inside {
+  height: 3px;
+  width: 0%;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.qoute {
+  text-align: left;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+i.fa {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 60px;
+}
+
+.fa-quote-right {
+  left: 40px;
+}
+
+.fa-quote-left {
+  right: 40px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile .profile-pic {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.profile .info p {
+  margin: 0;
+}
+
+.profile .info p.name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
