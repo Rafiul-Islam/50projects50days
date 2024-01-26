@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       setTimeout(() => {
         generateInsectImage();
-      }, 1200);
+      }, 1300);
     });
 
     insectContainer.append(img);
