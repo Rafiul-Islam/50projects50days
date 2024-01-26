@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insect Catch Game</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="screen-1">
+        <div>
+          <h1>Catch The Insect</h1>
+          <button id="gameStartingButton" class="btn">Play Game</button>
+        </div>
+      </section>
+      <section id="screen2" class="screen-2">
+        <div>
+          <h1>What is your "favorite" insect?</h1>
+          <div class="grid">
+            <div class="box">
+              <p>Fly</p>
+              <img
+                src="http://pngimg.com/uploads/fly/fly_PNG3946.png"
+                alt="fly"
+              />
+            </div>
+            <div class="box">
+              <p>Mosquito</p>
+              <img
+                src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
+                alt="mosquito"
+              />
+            </div>
+            <div class="box">
+              <p>Spider</p>
+              <img
+                src="http://pngimg.com/uploads/spider/spider_PNG12.png"
+                alt="spider"
+              />
+            </div>
+            <div class="box">
+              <p>Roach</p>
+              <img
+                src="http://pngimg.com/uploads/roach/roach_PNG12163.png"
+                alt="roach"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="screen3" class="screen-3">
+        <div class="alert">
+          Are you annnoyed yet? <br />
+          You are playing an impossible game!!
+        </div>
+        <div class="score-and-time-container">
+          <div class="time-container">
+            <p>Time:</p>
+            <p id="time">0:0</p>
+          </div>
+          <div class="score-container">
+            <p>Score:</p>
+            <p id="score">0</p>
+          </div>
+        </div>
+        <div id="insectContainer" class="insect-container"></div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

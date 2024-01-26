@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #516dff;
+  color: #fff;
+  font-family: "Press Start 2P", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+.screen-1,
+.screen-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-1 h1 {
+  font-size: 30px;
+}
+
+.btn {
+  border: 0;
+  background-color: #fff;
+  color: #516dff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.screen-2 h1 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.screen-2 .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.screen-2 .box {
+  height: 160px;
+  width: 160px;
+  border: 2px solid #fff;
+  padding: 20px;
+  margin: 10px;
+  margin-top: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.screen-2 .box p {
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+
+.screen-2 .box img {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.screen-2 .box:hover {
+  background: #fff;
+}
+
+.screen-2 .box:hover p {
+  color: #516dff;
+}
+
+.screen-3 {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  text-align: left;
+  position: relative;
+}
+
+.screen-3 .score-and-time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 70px;
+  padding: 0 30px;
+}
+
+.screen-3 .alert {
+  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-150%);
+  transition: transform 0.4s ease-in;
+}
+
+.alert.visible {
+  transform: translateY(150%);
+  opacity: 1;
+}
+
+.time-container,
+.score-container {
+  display: flex;
+}
+.time-container p,
+.score-container p {
+  font-size: 20px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.insect-container {
+  margin: 30px;
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: relative;
+}
+
+.insect {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  animation: popUp 0.4s ease-in;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
