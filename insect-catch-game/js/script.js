@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const gameStartingButton = document.querySelector("#gameStartingButton");
 
+  const screen1 = document.querySelector("#screen1");
   const screen2 = document.querySelector("#screen2");
   const screen3 = document.querySelector("#screen3");
+
+  screen1.scrollIntoView();
 
   const boxes = document.querySelectorAll(".box");
 
